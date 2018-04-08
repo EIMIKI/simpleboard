@@ -1,0 +1,21 @@
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>SimpleBoard</title>
+</head>
+<body>
+  <h1>シンプル掲示板</h1>
+  <h2>発言ログ</h2>
+    {{range $index,$value := .}}
+    <p>{{$index}}:{{$value}}</p>
+    {{end}}
+  <br />
+  <h2>発言フォーム</h2>
+  <form action="/simple" method="post">
+    ニックネーム<input type="text" name="name"/>
+    <br />
+    投稿内容<input type="text" name="text" />
+    <input type="submit" />
+  </form>
+</body>
+</html>
